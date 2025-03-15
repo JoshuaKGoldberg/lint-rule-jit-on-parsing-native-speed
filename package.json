@@ -1,0 +1,8 @@
+{
+    "name": "lint-rule-jit-on-parsing-native-speed",
+    "description": "Proof-of-concept performance test of linting at JIT speed after parsing at native speed. 🪴",
+    "type": "module",
+    "devDependencies": {
+        "@swc/core": "1.4.8"
+    }
+}
