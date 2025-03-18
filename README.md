@@ -14,20 +14,33 @@ node seed.js
 
 ## Measurements
 
-Examples from running on an M1 Mac Studio, showing about 90 milliseconds to lint 100 files or about 350 milliseconds to lint 1,000 files:
+Examples from running on an M1 Mac Studio, showing:
+
+| Files Count | Time (Approx.)   |
+| ----------- | ---------------- |
+| 100         | 90 milliseconds  |
+| 1,000       | 350 milliseconds |
+| 10,000      | 2.9 seconds      |
 
 ```plaintext
-$ hyperfine "node run.js 100" --warmup 3
+ $ hyperfine "node run.js 100" --warmup 3 
 Benchmark 1: node run.js 100
-  Time (mean ± σ):      85.1 ms ±   1.2 ms    [User: 92.6 ms, System: 9.7 ms]
-  Range (min … max):    82.9 ms …  88.3 ms    34 runs
+  Time (mean ± σ):      88.1 ms ±   0.9 ms    [User: 94.5 ms, System: 11.2 ms]
+  Range (min … max):    85.7 ms …  89.6 ms    32 runs
 ```
 
 ```plaintext
-$ hyperfine "node run.js 1000" --warmup 3
+$ hyperfine "node run.js 1000" --warmup 3 
 Benchmark 1: node run.js 1000
-  Time (mean ± σ):     331.7 ms ±   1.8 ms    [User: 348.9 ms, System: 27.7 ms]
-  Range (min … max):   329.7 ms … 335.8 ms    10 runs
+  Time (mean ± σ):     348.8 ms ±   6.4 ms    [User: 362.8 ms, System: 33.9 ms]
+  Range (min … max):   343.0 ms … 365.9 ms    10 runs
+```
+
+```plaintext
+$ hyperfine "node run.js 10000" --warmup 3
+Benchmark 1: node run.js 10000
+  Time (mean ± σ):      2.852 s ±  0.019 s    [User: 2.730 s, System: 0.262 s]
+  Range (min … max):    2.819 s …  2.874 s    10 runs
 ```
 
 > ⚡️ The excellent [sharkdp/hyerfine](https://github.com/sharkdp/hyperfine) was used for performance measurements.

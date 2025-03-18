@@ -10,7 +10,7 @@ class MyVisitor extends swc.Visitor {
   }
 
   visitNumericLiteral(literal) {
-    if (this.id === literal.value.toString().padStart(4, "0")) {
+    if (this.id.includes(literal.value.toString().padStart(3, "0"))) {
       this.results.push({
         fileName: this.fileName,
         span: literal.span,
