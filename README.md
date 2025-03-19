@@ -63,3 +63,4 @@ Real-world linting includes many more heavyweight operations:
 
 The purpose of this measurement is not to indicate the expected performance of a mixed JIT and native speed linter.
 The purpose is only to get rough starting baselines for the scale of speeds: whether we linting a hundred files takes, say, a hundred milliseconds verses a full second.
+This proof of concept shows at least that the impact of sending file data parsed by native code into JavaScript execution is not a significant bottleneck.
