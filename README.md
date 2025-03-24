@@ -1,6 +1,6 @@
 # Point of Comparison: Lint Rule at JIT Speed with Parsing at Native Speed
 
-> 📝 Associated blog post: [Why I'd Write a Linter in TypeScript](https://joshuakgoldberg.com/blog/why-id-write-a-linter-in-typescript)
+> 📝 Associated blog post: [Hybrid Linters: The Best of Both Worlds](https://www.joshuakgoldberg.com/blog/hybrid-linters-the-best-of-both-worlds)
 
 This is a proof-of-concept performance test showing:
 
